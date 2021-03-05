@@ -27,7 +27,7 @@ So each read is represented by 4 rows. If one FASTQ file contains 1000 reads, it
 
 - If the sequencing is done in single-end mode, there will generate 1 FASTQ file for each sample; if it is done in paired-end mode, it will generate 2 FASTQ files for each sample (one for each read in the read pair), usually named as `sample_R1.fastq` and `sample_R2.fastq`.
 
-- A real example from SRA (the NIH repository for sequencing read data): 
+- A real [example from SRA](https://trace.ncbi.nlm.nih.gov/Traces/sra/?run=SRR13690103), the NIH repository for sequencing read data. See `Data-access` tab and `Original Format` section. 
 
 https://sra-pub-sars-cov2.s3.amazonaws.com/sra-src/SRR13690103/RR065e_01847_W-R175-A1_B01_covid_1.fq.gz.1
 
@@ -72,10 +72,11 @@ TCGGCTGCATGCTTAGTGCACTCACGCAGTATAATTAATA
   + Rows starting with `>` contain the name of the genomes proceeding.
   + Nucleotide positions can have [more than 1 nucleotide composition](https://genome.ucsc.edu/goldenPath/help/iupac.html.). For example the beginning of example genomes are filled with N, which means they can be any nucleotide, due to low confidence in what these bases should be. 
 
-- FASTA is the file people submit to GISAID or NCBI GenBank.
+- FASTA is the file people submit to GISAID or NCBI GenBank. Here is 
 
+<br>
 
-### Phylogeny tree: `all_samples.json`
+## Phylogeny tree: `all_samples.json`
 
 - With genomes of multiple samples, one can build a phylogeny tree based on the similarity and differences in their genomes. 
 
