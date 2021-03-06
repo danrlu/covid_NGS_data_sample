@@ -1,10 +1,10 @@
-# Key file types in genomic epidemiology workflow 
-(Below is with Illumina sequencing. Nanopore is slightly different)
+# Key file types in genomic epidemiology 
+(Below is for Illumina sequencing. Nanopore is slightly different)
 
 | data analysis | step 1 | step 2 | step 3 | step 4 | 
 |---|-----|------|-------|--|
 | file content | raw sequencing reads | reads mapped to reference genome | consensus genome | tree |
-| file type | fastq file | bam file | fasta file | json file |
+| file type | FASTQ file | BAM file | FASTA file | JSON file |
 
 <br>
 
@@ -43,13 +43,13 @@ https://sra-pub-sars-cov2.s3.amazonaws.com/sra-src/SRR13690103/RR065e_01847_W-R1
 
 ## Mapped read file: `sample.bam`
 
-- To characterize an individual genome, aka to identify the mutations, we need to "compare" the sequencing reads originated from the sample genome to the reference genome.
+- To characterize an individual genome, i.e. to identify the mutations, we need to compare the sequencing reads originated from the sample genome to the reference genome.
 
-- Such "comparison" results in a [BAM file](https://samtools.github.io/hts-specs/SAMv1.pdf) that contains comprehensive information of how each sequencing read matches or differs from the reference genome. 
+- Such a comparison results in a [BAM file](https://samtools.github.io/hts-specs/SAMv1.pdf) that contains comprehensive information about how each sequencing read matches or differs from the reference genome. 
 
 - BAM files are binary to reduce file size, so they require special tools to open and read. 
 
-- This is an essential intermediate step in the workflow but BAM files are usually not directly used in genomic epidemiology investigations.
+- BAM files are an essential intermediate step in the workflow, but they are usually not directly used in genomic epidemiology investigations.
 
 - A more concise VCF file that only contains the information about mutations can further be generated from BAM files. 
 
@@ -57,7 +57,7 @@ https://sra-pub-sars-cov2.s3.amazonaws.com/sra-src/SRR13690103/RR065e_01847_W-R1
 
 ## Consensus genome: `sample.fasta` or `sample.fa`
 
-- With a reference genome and the information in a BAM file , aka a reference genome and how the sample genome differs from it, one can re-constitute the full sample genome that was sequenced. 
+- Knowing a reference genome and how the sample genome differs from it (stored in a BAM file), one can re-constitute the full sample genome that was sequenced. 
 
 - The resulting genomic sequence (the 'consensus genome') is stored in FASTA files.
 
@@ -78,7 +78,7 @@ TCGGCTGCATGCTTAGTGCACTCACGCAGTATAATTAATA
   + Each sequence starts with `>` followed by the name of the sequence.
   + Nucleotide positions can have [more than 1 nucleotide composition](https://genome.ucsc.edu/goldenPath/help/iupac.html.). For example the beginning of example genomes are filled with N, which means they can be any nucleotide, due to low confidence in what these bases should be. 
 
-- FASTA is the file people submit to GISAID or NCBI GenBank. For example [here](https://www.ncbi.nlm.nih.gov/nuccore/MN908947.3?report=fasta) is one of the reference COVID genome.
+- FASTA is the file people submit to GISAID or NCBI GenBank. For example [here](https://www.ncbi.nlm.nih.gov/nuccore/MN908947.3?report=fasta) is one of the reference COVID genomes.
 
 <br>
 
@@ -86,9 +86,9 @@ TCGGCTGCATGCTTAGTGCACTCACGCAGTATAATTAATA
 
 - With genomes of multiple samples, one can build a phylogeny tree based on the similarity and differences in their genomes. 
 
-- There are many file types used to store phylogeny trees. Nextstrain use JSON files. These JSON files contain both structure of the tree and many useful metadata. 
+- There are many file types used to store phylogeny trees. Nextstrain uses a specialized JSON format. These JSON files contain both the structure of the tree and a lot of useful metadata. 
 
-- Here is [what Nextstrain do with the FASTA](https://docs.nextstrain.org/projects/augur/en/stable/index.html). The Augur pipeline process genome data, build phylogeny trees and write its output in JSON files, which is then the input for Auspice to display the phylogeny tree. 
+- Here is [what Nextstrain does with the genomes](https://docs.nextstrain.org/projects/augur/en/stable/index.html). In short, the Augur pipeline processes genome data, builds phylogeny trees, and write its output in JSON files, which is then the input for Auspice to display the phylogeny tree. 
 
 - A [very simple JSON](https://github.com/czbiohub/covidtracker/raw/master/auspice/covidtracker_pawnee-examples.json) that one can drag and drop to https://auspice.us/
 
