@@ -57,7 +57,7 @@ FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF:FFFFFFFFFFFFFFFFFFFFF:FFF:FFFFFFFFFFFFFFFFFF:F
 
 ## Consensus genome: `sample.fasta` or `sample.fa`
 
-- Knowing a reference genome and how the sample genome differs from it (stored in a BAM file), one can re-constitute the full sample genome that was sequenced. 
+- Knowing a reference genome and how the sample genome differs from it (information stored in a BAM file), one can re-constitute the full sample genome that was sequenced. 
 
 - The resulting genomic sequence (the 'consensus genome') is stored in FASTA files.
 
