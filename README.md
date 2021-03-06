@@ -51,7 +51,7 @@ FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF:FFFFFFFFFFFFFFFFFFFFF:FFF:FFFFFFFFFFFFFFFFFF:F
 
 - BAM files are an essential intermediate step in the workflow, but they are usually not directly used in genomic epidemiology investigations.
 
-- A more concise VCF file that only contains the information about mutations can further be generated from BAM files. 
+- A more concise [VCF file](https://samtools.github.io/hts-specs/VCFv4.2.pdf) that only contains the information about mutations can further be generated from BAM files. 
 
 <br>
 
