@@ -33,13 +33,9 @@ FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF:FFFFFFFFFFFFFFFFFFFFF:FFF:FFFFFFFFFFFFFFFFFF:F
 
 - If the sequencing is done in single-end mode, it will generate 1 FASTQ file for each sample. If it is done in paired-end mode, it will generate 2 FASTQ files for each sample, usually named as `sample_R1.fastq` and `sample_R2.fastq`.
 
-- [A real example from SRA](https://trace.ncbi.nlm.nih.gov/Traces/sra/?run=SRR13690103), the NIH repository for sequencing read data. See the `Data-access` tab,  `Original Format` section. 
+- Example FASTQ [R1](https://github.com/czbiohub/sc2-illumina-pipeline/raw/master/test_data/sample1_artic_R1.fq.gz) and [R2](https://github.com/czbiohub/sc2-illumina-pipeline/raw/master/test_data/sample1_artic_R2.fq.gz)
 
-https://sra-pub-sars-cov2.s3.amazonaws.com/sra-src/SRR13690103/RR065e_01847_W-R175-A1_B01_covid_1.fq.gz.1
-
-https://sra-pub-sars-cov2.s3.amazonaws.com/sra-src/SRR13690103/RR065e_01847_W-R175-A1_B01_covid_2.fq.gz.1  
-
-- Further reading: https://support.illumina.com/bulletins/2016/04/fastq-files-explained.html
+- A real [example from SRA](https://trace.ncbi.nlm.nih.gov/Traces/sra/?run=SRR13690103), the NIH repository for sequencing read data. See the `Data-access` tab,  `Original Format` section. 
 
 <br>
 
@@ -90,7 +86,7 @@ TCGGCTGCATGCTTAGTGCACTCACGCAGTATAATTAATA
 
 - There are many file types used to store phylogeny trees. Nextstrain uses a specialized JSON format. These JSON files contain both the structure of the tree and a lot of useful metadata. 
 
-- [Here is what Nextstrain does with the genomes](https://docs.nextstrain.org/projects/augur/en/stable/index.html). In short, the Augur pipeline processes genome data, builds phylogeny trees, and write its output in JSON files, which is then the input for Auspice to display the phylogeny tree. 
+- [Here] is what Nextstrain does with the genomes(https://docs.nextstrain.org/projects/augur/en/stable/index.html). In short, the Augur pipeline processes genome data, builds phylogeny trees, and write its output in JSON files, which is then the input for Auspice to display the phylogeny tree. 
 
 - A [very simple JSON](https://github.com/czbiohub/covidtracker/raw/master/auspice/covidtracker_pawnee-examples.json) that one can drag and drop to https://auspice.us/
 
