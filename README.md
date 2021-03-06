@@ -1,5 +1,5 @@
 # Key file types in genomic epidemiology 
-(Below is for Illumina sequencing. Nanopore is slightly different)
+(Below is for Illumina sequencing. Nanopore sequencing is slightly different)
 
 | data analysis | step 1 | step 2 | step 3 | step 4 | 
 |---|-----|------|-------|--|
