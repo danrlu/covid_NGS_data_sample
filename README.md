@@ -59,7 +59,7 @@ FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF:FFFFFFFFFFFFFFFFFFFFF:FFF:FFFFFFFFFFFFFFFFFF:F
 
 - Knowing a reference genome and how the sample genome differs from it (information stored in a BAM file), one can re-constitute the full sample genome that was sequenced. 
 
-- The resulting genomic sequence (the 'consensus genome') is stored in FASTA files.
+- The resulting genomic sequence is stored in FASTA files.
 
 - A FASTA file stores nucleotide sequences or amino acid sequences.
 
@@ -78,7 +78,9 @@ TCGGCTGCATGCTTAGTGCACTCACGCAGTATAATTAATA
   + Each sequence starts with `>` followed by the name of the sequence.
   + Nucleotide positions can have [more than 1 nucleotide composition](https://genome.ucsc.edu/goldenPath/help/iupac.html.). For example the beginning of example genomes are filled with N, which means they can be any nucleotide, due to low confidence in what these bases should be. 
 
-- FASTA is the file people submit to GISAID or NCBI GenBank. For example [here](https://www.ncbi.nlm.nih.gov/nuccore/MN908947.3?report=fasta) is one of the reference COVID genomes.
+- FASTA is the file people submit to GISAID or NCBI GenBank. 
+
+- [Here](https://www.ncbi.nlm.nih.gov/nuccore/MN908947.3?report=fasta) is the FASTA for one of the reference COVID genomes.
 
 <br>
 
