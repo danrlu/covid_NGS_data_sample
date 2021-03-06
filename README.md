@@ -47,7 +47,7 @@ https://sra-pub-sars-cov2.s3.amazonaws.com/sra-src/SRR13690103/RR065e_01847_W-R1
 
 - Such a comparison results in a [BAM file](https://samtools.github.io/hts-specs/SAMv1.pdf) that contains comprehensive information about how each sequencing read matches or differs from the reference genome. 
 
-- BAM files are binary to reduce file size, so they require special tools to open and read. 
+- BAM files are binary to reduce file size, so they require special tools to open and read. The non-binary, human readable version of BAM files are SAM files but they are much larger in size.
 
 - BAM files are an essential intermediate step in the workflow, but they are usually not directly used in genomic epidemiology investigations.
 
