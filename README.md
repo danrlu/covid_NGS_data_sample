@@ -8,7 +8,7 @@
 | file content | raw sequencing reads | reads mapped to reference genome* | sample genome | tree |
 | file type | FASTQ file | BAM file | FASTA file | JSON file |
 
-                * The reference genome is the original COVID genome sequence from Wuhan.
+\* The reference genome is the original COVID genome sequence from Wuhan.
 
 <br>
 
