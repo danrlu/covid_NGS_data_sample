@@ -3,8 +3,10 @@
 
 | data analysis | step 1 | step 2 | step 3 | step 4 | 
 |---|-----|------|-------|--|
-| file content | raw sequencing reads | reads mapped to reference genome | consensus genome | tree |
+| file content | raw sequencing reads | reads mapped to reference genome* | sample genome | tree |
 | file type | FASTQ file | BAM file | FASTA file | JSON file |
+
+\* The reference genome is the original COVID genome sequence from Wuhan.
 
 <br>
 
@@ -41,7 +43,7 @@ https://sra-pub-sars-cov2.s3.amazonaws.com/sra-src/SRR13690103/RR065e_01847_W-R1
 
 <br>
 
-## Mapped read file: `sample.bam`
+## Mapped read file: `sample.bam` or `sample.sam`
 
 - To characterize an individual genome, i.e. to identify the mutations, we need to compare the sequencing reads originated from the sample genome to the reference genome.
 
