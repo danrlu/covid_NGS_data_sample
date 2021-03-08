@@ -90,7 +90,7 @@ TCGGCTGCATGCTTAGTGCACTCACGCAGTATAATTAATA
 
 - There are many file types used to store phylogeny trees. Nextstrain uses a specialized JSON format. These JSON files contain both the structure of the tree and a lot of useful metadata. 
 
-- [Here] is what Nextstrain does with the genomes(https://docs.nextstrain.org/projects/augur/en/stable/index.html). In short, the Augur pipeline processes genome data, builds phylogeny trees, and write its output in JSON files, which is then the input for Auspice to display the phylogeny tree. 
+- [Here](https://docs.nextstrain.org/projects/augur/en/stable/index.html) is what Nextstrain does with the genomes. In short, the Augur pipeline processes genome data, builds phylogeny trees, and write its output in JSON files, which is then the input for Auspice to display the phylogeny tree. 
 
 - A [very simple JSON](https://github.com/czbiohub/covidtracker/raw/master/auspice/covidtracker_pawnee-examples.json) that one can drag and drop to https://auspice.us/
 
